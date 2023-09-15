@@ -107,6 +107,12 @@ nav .menu:hover >.nav-lateral {
 
 
 /*SERVIÇOS DO SITE*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
 section{
     width: 100%;  
     margin:auto;
@@ -118,26 +124,98 @@ section{
     z-index: 1000;
 }
 
-section .services{
+
+section .services-1{
+    cursor: pointer;
+    transition-duration: 1s;
+    
+}
+section .services-1:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-2{
     cursor: pointer;
     transition-duration: 1s;
 }
-section .services:hover{
+section .services-2:hover{
     transform: scale(1.3);
     transition-duration: 1s;
-
-
 }
-section .services > p{
+section .services-3{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-3:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-4{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-4:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-5{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-5:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+
+section .services-1 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-1 > p{
     margin-top: 1px;
     font-size: 2vw;
     font-weight: bold;
 
 }
-
-section .services > img{
+section .services-2 > img{
     width: 10vw;
     height: 10vw;
+}
+section .services-2 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-3 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-3 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-4 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-4 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-5 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-5 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
 }
 
 /*SERVIÇOS DO SITE*/
@@ -243,6 +321,127 @@ footer .slider .right p{
 }
 
 /*FOOTER DO SITE*/
+
+
+@media (max-width: 720px) {
+    nav .logo img{
+        width: 30vw; 
+    }
+
+    nav .logo {
+        margin-right: 6vw; 
+    }
+    nav .menu img{
+        width: 5vw;
+        cursor: pointer;
+    }
+
+    nav .space{
+        width: 3%;
+    }
+
+    nav .text p{
+        font-size: 3vw;
+
+    }
+    section{
+        flex-wrap: wrap;
+    }
+    section .services-1 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-2 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-3 img{
+        width: 28vw;
+        height: 30vw;
+   
+    }
+    section .services-4 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-5 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-1 p{
+        font-size: 5vw;
+   
+    }
+    section .services-2 p{
+        font-size: 5vw;
+   
+    }
+    section .services-3 p{
+        font-size: 5vw;
+   
+    }
+    section .services-4 p{
+        font-size: 5vw;
+   
+    }
+    section .services-5 p{
+        font-size: 5vw;
+   
+    }
+    section .services-1{
+        float: left;
+        width: 50%;
+        margin-bottom: 10vw;
+    }
+
+    section .services-2{
+        float: right;
+        width: 50%;
+       
+    }
+    section .services-3{
+        float: left;
+        width: 50%;
+    }
+    section .services-4{
+        float: right;
+        width: 50%;
+        
+    }
+    section .services-5{
+        margin-top: 3vw;
+        
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main .banner{
+ 
+        flex-direction: column;
+        
+    }
+
+    main .banner .left h1{
+        font-size: 5vw; 
+
+    }
+
+    main .banner .left p{
+        font-size: 4vw; 
+
+    }
+  
+   
+   
+
+    
+}
 
 
 
