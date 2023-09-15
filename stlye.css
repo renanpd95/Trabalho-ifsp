@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*SUPERIOR DO SITE*/
+nav{
+    width: 100%;
+    display: inline-block;
+    background-color: #0487FF;  
+}
+
+nav ,.space, .logo, .text, .menu{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav .space{
+    width: 40%;
+}
+
+nav .logo {
+    margin-right: 6vw; 
+}
+
+nav .logo img{
+    width: 20vw; 
+}
+
+nav .text p{
+    font-size: 2vw;
+    color: white;   
+    cursor: pointer;
+}
+
+nav .menu {
+    position: absolute;
+    right: 6vw;
+    top: 2vw; 
+}
+nav .menu img{
+    width: 3vw;
+    cursor: pointer;
+}
+nav .menu:hover >.nav-lateral {
+    display: block;
+    position: absolute;
+    z-index: 1;
+   
+}
+
+.nav-lateral{
+    background-color: #0487FFF0;
+    width: 29vw;
+    margin-left: -20vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-lateral .top .button-1{
+    margin: 6vw 5vw 0vw 5vw;
+    padding: 1vw;
+    background-color: #00FF38;
+}
+.nav-lateral .top .button-1 a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.8vw;
+}
+
+.nav-lateral .top .button-2{
+    margin: 2vw 5vw 0vw 5vw;
+    padding: 1vw;
+    background-color: red;
+}
+.nav-lateral .top .button-2 a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.8vw;
+}
+
+.nav-lateral .bottom{
+    margin: 13vw 0vw 0vw 0vw;
+ 
+}
+
+.nav-lateral .bottom .button-2{
+    margin: 0vw 5vw 2vw 5vw;
+    padding: 1vw;
+    border: 3px solid #030166;
+    
+}
+
+
+.nav-lateral .bottom .button-2 a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.8vw;
+    
+}
+/*SUPERIOR DO SITE*/
+
+
+
+/*SERVIÇOS DO SITE*/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+section{
+    width: 100%;  
+    margin:auto;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+
+section .services-1{
+    cursor: pointer;
+    transition-duration: 1s;
+    
+}
+section .services-1:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-2{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-2:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-3{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-3:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-4{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-4:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-5{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-5:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+
+section .services-1 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-1 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-2 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-2 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-3 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-3 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-4 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-4 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-5 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-5 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+
+/*SERVIÇOS DO SITE*/
+
+
+
+
+/*BANNER DO SITE*/
+
+main{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main .banner{
+    margin-top: 3px;
+    background-color: #D6D6D6;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+main .banner >.left,.right{
+    align-self: center;
+    text-align: center;
+    
+}
+
+main .banner .left{
+    padding: 7vw;     
+}
+
+main .banner .left h1{
+    font-size: 2vw; 
+    margin-bottom: 2vw; 
+}
+
+main .banner .left p{
+    font-size: 1.3vw; 
+    margin-bottom: -3vw;
+    margin-top: 3vw;
+}
+
+main .banner .right {
+    padding-right: 3vw;
+}
+
+main .banner .right img{
+    width: 36vw;
+}
+
+/*BANNER DO SITE*/
+
+
+
+
+/*FOOTER DO SITE*/
+footer{
+    background: #160023;
+    color: #ffff;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2vw;
+
+}
+
+footer .slider{
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+
+footer .slider .left{
+    margin-right: 2vw;
+
+}
+footer .slider .left img{
+    width: 12vw;
+
+}
+
+
+footer .slider .right{
+    text-align: left;
+    padding-left: 2vw;
+
+}
+
+
+footer .slider .right h3{
+    font-size: 2.1vw;
+    margin-bottom: 1vw;
+
+}
+
+footer .slider .right p{
+    font-size: 1.3vw;
+    font-weight: lighter;
+    width: 90%;
+
+}
+
+/*FOOTER DO SITE*/
+
+
+@media (max-width: 720px) {
+    nav .logo img{
+        width: 30vw; 
+    }
+
+    nav .logo {
+        margin-right: 6vw; 
+    }
+    nav .menu img{
+        width: 5vw;
+        cursor: pointer;
+    }
+
+    nav .space{
+        width: 3%;
+    }
+
+    nav .text p{
+        font-size: 3vw;
+
+    }
+    section{
+        flex-wrap: wrap;
+    }
+    section .services-1 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-2 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-3 img{
+        width: 28vw;
+        height: 30vw;
+   
+    }
+    section .services-4 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-5 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-1 p{
+        font-size: 5vw;
+   
+    }
+    section .services-2 p{
+        font-size: 5vw;
+   
+    }
+    section .services-3 p{
+        font-size: 5vw;
+   
+    }
+    section .services-4 p{
+        font-size: 5vw;
+   
+    }
+    section .services-5 p{
+        font-size: 5vw;
+   
+    }
+    section .services-1{
+        float: left;
+        width: 50%;
+        margin-bottom: 10vw;
+    }
+
+    section .services-2{
+        float: right;
+        width: 50%;
+       
+    }
+    section .services-3{
+        float: left;
+        width: 50%;
+    }
+    section .services-4{
+        float: right;
+        width: 50%;
+        
+    }
+    section .services-5{
+        margin-top: 3vw;
+        
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main .banner{
+ 
+        flex-direction: column;
+        
+    }
+
+    main .banner .left h1{
+        font-size: 5vw; 
+
+    }
+
+    main .banner .left p{
+        font-size: 4vw; 
+
+    }
+  
+   
+   
+
+    
+}
+
+
+
+
+
+
