@@ -449,6 +449,56 @@ footer .slider .right p{
         width: 90%;
     
     }
+
+    .nav-lateral{
+        background-color: #0487FFF0;
+        width: 100vw;
+        margin-top: 3vw;
+        margin-left: -89vw;
+        height: 50vh;
+        display: none;
+        position: absolute;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-lateral .top .button-1{
+        margin: 6vw 30vw 0vw 30vw;
+        padding: 1vw;
+        background-color: #00FF38;
+    }
+    .nav-lateral .top .button-1 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+    }
+
+    .nav-lateral .top .button-2{
+        margin: 6vw 30vw 0vw 30vw;
+        padding: 1vw;
+        background-color: red;
+    }
+    .nav-lateral .top .button-2 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+    }
+    
+    .nav-lateral .bottom .button-2{
+        margin: 2vw 30vw 0vw 30vw;
+        padding: 1vw;
+        border: 3px solid #030166;
+        
+    }
+    
+    
+    .nav-lateral .bottom .button-2 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+        
+    }
+    
   
    
    
