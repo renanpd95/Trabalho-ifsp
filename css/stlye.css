@@ -324,6 +324,236 @@ footer .slider .right p{
 /*FOOTER DO SITE*/
 
 
+/*
+ _        ___     ____   ___   _   _ 
+| |      / _ \   / ___| |_ _| | \ | |
+| |     | | | | | |  _   | |  |  \| |
+| |___  | |_| | | |_| |  | |  | |\  |
+|_____|  \___/   \____| |___| |_| \_|
+*/                     
+
+.login{
+
+    height: 100vh;
+    background-color: #D6D6D6;
+
+    padding-left: 39.5%;
+}
+
+
+.login h2{
+    padding: 3vw;
+    font-size: 2vw;
+   
+}
+#loginForm{
+    width: 40%;
+}
+#loginForm > label{
+    font-size: 1.5vw;
+
+}
+#loginForm > a{
+    text-decoration: none;
+    color: black;
+
+}
+#loginForm > p >a{
+    text-decoration: none;
+    color: black;
+
+}
+#loginForm .button-login{
+    text-align: center;
+
+}
+#loginForm .button-login  > input{
+    margin-top: 2vw;
+    background-color: #00FF38;
+    padding: 1vw 8vw 1vw 8vw;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#loginForm > input{
+    font-size: 1vw;
+    padding: 1.3vw 10vw 1.3vw 1vw;
+}
+
+
+/*CADASTRO*/
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.container input{
+    border-radius: 3vw;
+    padding: 0.8vw 10vw 0.8vw 2vw;
+    border: 1px solid #0487FF;
+    margin: 1vw 1vw;
+}
+.container select{
+    border-radius: 3vw;
+    padding: 0.8vw 2vw 0.8vw 2vw;
+    border: 1px solid #0487FF;
+}
+.coluna {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 1.5vw 13vw 1.5vw 13vw;
+    background-color: #91b499;
+    text-align: center;
+    border-radius: 3vw;
+    border: none;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+    /*PRESTAR SERVIÇOS*/
+
+    /* Estilos para formatar o formulário */
+
+    .prestar-body{
+        background-color: #D6D6D6;
+    }
+    .form-container.prestar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .column.prestar {
+        width: 45%;
+    }
+    .form-group.prestar {
+        margin-bottom: 1.5vw;
+    }
+    .form-group.prestar label {
+        display: block;
+        font-size: 1.7vw;
+    }
+    .form-group.prestar input, .form-group.prestar textarea {
+        width: 100%;
+        padding: 1.8vw 1vw 1.8vw 2vw;
+    }
+    .button-container.prestar {
+        text-align: center;
+        
+
+    }
+    .button-container.prestar button {
+        padding: 1vw 3vw 1vw 3vw;
+        font-size: 2vw;
+        border-radius: 1px;
+        background-color: #00FF38;
+        color: #000000;
+        margin-top: -2vw;
+        border: 1px solid black;
+        
+    }
+    .form-container{
+        padding: 5vw;
+    }
+
+    
+    /*BARBEIRO*/
+
+    .text-profile{
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5vw;
+    }
+    .profile-box {
+        display: flex;
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        width: 30vw; /* Largura máxima da caixa */
+        background: white;
+        
+    }
+    
+    .profissional{
+        background: #D6D6D6;
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+    }
+    .profile-picture {
+        width: 7vw;
+        height: 10vw;
+        margin-right: 1.5vw;
+        margin-top: 0vw;
+    }
+    .profile-info {
+        flex: 1;
+    }
+    .profile-info h2 {
+        margin: 0;
+        
+    }
+    .profile-info p {
+        margin: 1vw 0vw 1vw 0vw;
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /*BARBEIRO*/
+
+    .container.barbeiro-1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .column.barbeiro-1 {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    .column.barbeiro-1 h2 {
+        margin-top: 0;
+    }
+    .calendar.barbeiro-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar.barbeiro-1 label {
+        font-weight: bold;
+    }
+    #agendar-profissional{
+        background-color: #00FF38;
+        border-radius: 0px;
+        color: black;
+        font-size: 2vw;
+        border: 1px solid black;
+    }
+
+
 @media (max-width: 720px) {
     nav .logo img{
         width: 30vw; 

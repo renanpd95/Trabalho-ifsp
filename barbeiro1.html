@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stlye.css">
+    <title>Reserve.me</title>
+</head>
+
+<body class="profissional">
+
+ <!--Superior do site-->
+    <header>
+        <nav>
+            <div class="space"></div>
+
+            <div class="logo">
+               <a href="index.html"><img src="img/RESERVE.ME logo.png" alt="logo"></a> 
+            </div>
+
+            <div class="menu">
+                <img src="img/hamburguer.png" alt="menu">
+                <div class="nav-lateral">
+                    <div class="top"> 
+                        <div class="button-1">
+                            <a href="#">Contratar Serviço</a>
+                        </div>
+                        <div class="button-2">
+                            <a href="prestar-serviço.html">Prestar Serviço</a>
+                        </div>
+                    </div>
+                    <div class="bottom"> 
+                        <div class="button-2">
+                            <a href="login.html">Entrar</a>
+                        </div>
+                        <div class="button-2">
+                            <a href="cadastro.html">Criar Conta</a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </nav>
+    
+            
+    </header>
+    
+
+ <!--Banner do site-->
+    
+ <h1>Agendamento de Serviço</h1>
+    <div class="container barbeiro-1">
+        <!-- Coluna 1: Escolha de Barbeiro, Horário e Serviço para Barbeiro 1 -->
+        <div class="column barbeiro-1">
+            <h2>Barbeiro Escolhido</h2>
+            <div class="profile-box">           
+                <img class="profile-picture" src="img/barbeiro.png" alt="Foto de Perfil">
+                <div class="profile-info">
+                    <h2>Marcos Pereira</h2>
+                    <img src="img/5 ESTRELAS.png" alt="">
+                    <p>Endereço: Av Ário Barnabe, 123, jd Lima</p>
+                    <ul>
+                        <li>Corte Masculino</li>
+                        <li>Corte cabelo cacheado e crespo</li>
+                        <li>Barba</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <h2>Escolha um Horário</h2>
+            <input type="time" id="horario" class="barbeiro-1">
+
+            <h2>Escolha um Serviço</h2>
+            <input type="checkbox" id="corteMasculino" name="servico" value="Corte Masculino" class="barbeiro-1">
+            <label for="corteMasculino">Corte Masculino</label>
+            <input type="checkbox" id="cabeloCacheado" name="servico" value="Corte Cabelo Cacheado" class="barbeiro-1">
+            <label for="cabeloCacheado">Corte Cabelo Cacheado</label>
+            <input type="checkbox" id="cabeloCrespo" name="servico" value="Corte Cabelo Crespo" class="barbeiro-1">
+            <label for="cabeloCrespo">Corte Cabelo Crespo</label>
+            <input type="checkbox" id="barba" name="servico" value="Barba" class="barbeiro-1">
+            <label for="barba">Barba</label>
+        </div>
+
+        <!-- Coluna 2: Escolha de Dia e Horário com Calendário -->
+        <div class="column barbeiro-1">
+            <h2 style="text-align: center;">Escolha um Dia e Horário Disponível</h2>
+            <div class="calendar barbeiro-1">
+                <label for="data">Escolha uma Data:</label>
+                <input type="date" id="data">
+                
+                <!-- Aqui você pode adicionar um calendário mais avançado -->
+                
+                <button id="agendar-profissional">Agendar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    
+</body>
+</html>
