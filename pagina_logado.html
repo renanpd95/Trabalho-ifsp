@@ -12,44 +12,44 @@
  <!--Superior do site-->
     <header>
        
-        <nav>
-            <div class="space"></div>
-
-            <div class="logo">
-                <img src="img/RESERVE.ME logo.png" alt="logo">
-            </div>
-            <div class="text">
-                <a href="como-funciona.html">Como Funciona</a>
-            </div>
-            <div class="menu">
-                <img src="img/hamburguer.png" alt="menu">
-                <div class="nav-lateral">
-                    <div class="top">   
-                        <div class="button-2">
-                            <a href="prestar-serviço.html">Prestar Serviço</a>
-                        </div>
-                    </div>
-                    <div class="bottom"> 
-                        <div class="button-2">
-                            <a href="login.html">Entrar</a>
-                        </div>
-                        <div class="button-2">
-                            <a href="cadastro.html">Criar Conta</a>
-                        </div>
-                    </div> 
+        <header>
+            <nav>
+                <div class="space"></div>
+    
+                <div class="logo">
+                   <a href="index.html"><img src="img/RESERVE.ME logo.png" alt="logo"></a> 
                 </div>
-            </div>
-        </nav>
+    
+                <div class="menu">
+                    <img src="img/hamburguer.png" alt="menu">
+                    <div class="nav-lateral">
+                        <div style="color: white; font-size: 1.5vw; padding-top: 6vw;" class="top"> 
+                            <p>Olá XXX XXX XXX, Seja bem-vindo</p>
+                            <p>ao RESERVE-ME.</p>
+                        </div>
+                        <div class="bottom"> 
+                            
+                            <div id="openPopup" class="button-2">
+                                <a href="#">Serviço solicitado</a>
+                            </div>
+                            <div class="button-2">
+                                <a href="index.html">Sair</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
 
         
 
  <!--Serviços do site-->
     <div class="row">
         <section>
-            <div class="services-1">
+            <a href="barbeiro.html"><div class="services-1">
                 <img src="img/barba-1.png" alt="foto-1">
                 <p>Barbeiro</p>
             </div>
+            </a>
             <div class="services-2">
                 <img src="img/Massagem.png" alt="foto-2">
                 <p>Massagista</p>
@@ -70,6 +70,15 @@
     </div>
             
     </header>
+    <div id="popup" class="popup-servico">
+        <div class="popup-content-servico">
+          <p>Agendamento com o barbeiro XXXXXXXXXXX,</p>
+          <p>Dia XX xx XXXXXXXXXXX, as XXh, com o serviço</p>
+          <p>de XXXXX XXXXXXXXXXX</p>
+          <button id="agendar" class="agendarpopup">Excluir</button>
+          <button id="fecharPopup" class="fecharPopup">Voltar</button>
+        </div>
+    </div>
     
 
  <!--Banner do site-->
@@ -104,6 +113,19 @@
         </div>
     </footer>
 
+    <script>
+        const openPopupButton = document.getElementById("openPopup");
+            const popup = document.getElementById("popup");
+            const closeButton = document.getElementById("fecharPopup");
+    
+            openPopupButton.addEventListener("click", function () {
+                popup.style.display = "block";
+            });
+    
+            closeButton.addEventListener("click", function () {
+                popup.style.display = "none";
+            });
+    </script>
 
 
     

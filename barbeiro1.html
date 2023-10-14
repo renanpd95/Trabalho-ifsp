@@ -8,7 +8,7 @@
 </head>
 
 <body class="profissional">
-
+  
  <!--Superior do site-->
     <header>
         <nav>
@@ -21,33 +21,35 @@
             <div class="menu">
                 <img src="img/hamburguer.png" alt="menu">
                 <div class="nav-lateral">
-                    <div class="top"> 
-                        <div class="button-1">
-                            <a href="#">Contratar Serviço</a>
-                        </div>
-                        <div class="button-2">
-                            <a href="prestar-serviço.html">Prestar Serviço</a>
-                        </div>
+                    <div style="color: white; font-size: 1.5vw; padding-top: 6vw;" class="top"> 
+                        <p>Olá XXX XXX XXX, Seja bem-vindo</p>
+                        <p>ao RESERVE-ME.</p>
                     </div>
                     <div class="bottom"> 
                         <div class="button-2">
-                            <a href="login.html">Entrar</a>
+                            <a href="">Serviço solicitado</a>
                         </div>
                         <div class="button-2">
-                            <a href="cadastro.html">Criar Conta</a>
+                            <a href="index.html">Sair</a>
                         </div>
                     </div> 
-                </div>
+                </div>  
             </div>
         </nav>
     
             
     </header>
-    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <p>Deseja Agendar com o barbeiro Xxxxx Xxxx,Dia xx xx xxxxxxxx, as xxh xx xxxxx, com o serviço de xxxxxxxxxxxxxxxxxx</p>
+          <p>Não esqueça de marcar na sua agenda!</p>
+          <button id="agendar" class="agendarpopup">Agendar</button>
+          <button id="fecharPopup" class="fecharPopup">Voltar</button>
+        </div>
+    </div>
 
  <!--Banner do site-->
     
- <h1>Agendamento de Serviço</h1>
     <div class="container barbeiro-1">
         <!-- Coluna 1: Escolha de Barbeiro, Horário e Serviço para Barbeiro 1 -->
         <div class="column barbeiro-1">
@@ -66,37 +68,44 @@
                 </div>
             </div>
             
-
-            <h2>Escolha um Horário</h2>
-            <input type="time" id="horario" class="barbeiro-1">
+            <h2>Escolha uma Data</h2>
+            <input type="date" id="data">
 
             <h2>Escolha um Serviço</h2>
-            <input type="checkbox" id="corteMasculino" name="servico" value="Corte Masculino" class="barbeiro-1">
-            <label for="corteMasculino">Corte Masculino</label>
-            <input type="checkbox" id="cabeloCacheado" name="servico" value="Corte Cabelo Cacheado" class="barbeiro-1">
-            <label for="cabeloCacheado">Corte Cabelo Cacheado</label>
-            <input type="checkbox" id="cabeloCrespo" name="servico" value="Corte Cabelo Crespo" class="barbeiro-1">
-            <label for="cabeloCrespo">Corte Cabelo Crespo</label>
-            <input type="checkbox" id="barba" name="servico" value="Barba" class="barbeiro-1">
-            <label for="barba">Barba</label>
+            <select id="Tipo" name="Tipo">
+                <option value="op1">Corte Masculino</option>
+                <option value="op2">Corte Cabelo Cacheado</option>
+                <option value="op3">Corte Cabelo Crespo</option>
+                <option value="op4">Barba</option>
+            </select>
         </div>
 
         <!-- Coluna 2: Escolha de Dia e Horário com Calendário -->
         <div class="column barbeiro-1">
             <h2 style="text-align: center;">Escolha um Dia e Horário Disponível</h2>
-            <div class="calendar barbeiro-1">
-                <label for="data">Escolha uma Data:</label>
-                <input type="date" id="data">
+            <div class="calendar barbeiro-1">             
                 
                 <!-- Aqui você pode adicionar um calendário mais avançado -->
-                
-                <button id="agendar-profissional">Agendar</button>
+                <button id="openPopup" class="agendar-profissional">Agendar</button>
+
             </div>
         </div>
     </div>
+   
 
+<script>
+    const openPopupButton = document.getElementById("openPopup");
+        const popup = document.getElementById("popup");
+        const closeButton = document.getElementById("fecharPopup");
 
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
 
+        closeButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+</script>
 
 
 

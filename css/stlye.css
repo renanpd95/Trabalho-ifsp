@@ -29,10 +29,11 @@ nav .logo img{
     width: 20vw; 
 }
 
-nav .text p{
+nav .text a{
     font-size: 2vw;
     color: white;   
     cursor: pointer;
+    text-decoration: none;
 }
 
 nav .menu {
@@ -545,12 +546,176 @@ button {
     .calendar.barbeiro-1 label {
         font-weight: bold;
     }
-    #agendar-profissional{
+    .agendar-profissional{
         background-color: #00FF38;
         border-radius: 0px;
         color: black;
         font-size: 2vw;
         border: 1px solid black;
+    }
+
+
+    /*Senha*/
+
+    .senha{
+        background:#D6D6D6;
+        padding: 3vw;
+        height: 100vh;
+    }
+    .senha > p{
+        font-size: 2vw;
+        margin-top: 5vw;
+    }
+    .senha > input{
+        font-size: 2vw;
+        margin-top: 2vw;
+        padding: 1vw 1vw 1vw 1vw ;
+        width: 100%;
+        border: none;
+    }
+    .senha > .button-senha{
+        font-size: 2vw;
+        padding: 10vw 1vw 1vw 1vw ;
+        
+    }
+    .senha >.button-senha > input{
+        font-size: 2vw;
+        padding: 1vw 6vw 1vw 6vw ;
+        background-color: #00FF38;
+        border: 1px solid black;
+        cursor: pointer;
+        
+    }
+
+
+     /*Como Funciona */
+
+    
+     .cor-pagina {
+        background: #D6D6D6;
+    
+    }
+    .como-funciona {
+        padding: 2vw 8vw 5vw 8vw;
+        text-align: center;
+    }
+    .como-funciona h2{
+        font-size: 2.5vw;
+        margin-top: 3%;
+    }
+    .como-funciona p{
+        font-size: 2vw;
+        margin-top: 4%;
+        text-align: justify;
+        
+    }
+    footer .slider-funciona{    
+        text-align: center;
+        padding: 3vw 9vw 3vw 9vw;
+    }
+    footer .slider-funciona2{       
+        text-align: center;
+        padding: 3vw 9vw 3vw 9vw;
+        
+    }
+    .doc-laranja{
+        align-items: center;
+    }
+    .usuario{
+        align-items: center;
+    }
+    .doc-laranja p{
+        font-size: 1.5vw;
+        text-align: justify;
+    }
+    .usuario p {
+        font-size: 1.5vw;
+        text-align: justify;
+    }
+
+    /*POPUP*/
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+       
+    }
+    .popup p{
+        font-size: 1.7vw;
+        padding: 1vw;
+        color: white;
+        margin: 1vw 1vw 4vw 1vw;
+    }
+
+    .popup-content {
+        background-color: #200857;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .agendarpopup{
+        background-color: #00FF38;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+    .fecharPopup{
+        background-color: red;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+     /*POPUP-SERVIÇOS*/
+     .popup-servico {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+       
+    }
+    .popup-servico p{
+        font-size: 1.7vw;
+        padding: 1vw;
+        color: black;
+        margin: 1vw 1vw 0.2vw 1vw;
+    }
+
+    .popup-content-servico  {
+        background-color: #D6D6D6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .agendarpopup{
+        background-color: red;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+    .fecharPopup{
+        background-color: #D6D6D6;
+        border: 1px solid black;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
     }
 
 
@@ -728,6 +893,8 @@ button {
         font-size: 4.5vw;
         
     }
+
+    
     
   
    
