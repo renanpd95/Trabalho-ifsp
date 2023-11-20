@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stlye.css">
+    <title>Reserve.me</title>
+</head>
+
+<body class="profissional">
+  
+ <!--Superior do site-->
+    <header>
+        <nav>
+            <div class="space"></div>
+
+            <div class="logo">
+               <a href="index.html"><img src="img/RESERVE.ME logo.png" alt="logo"></a> 
+            </div>
+
+            <div class="menu">
+                <img src="img/hamburguer.png" alt="menu">
+                <div class="nav-lateral">
+                    <div style="color: white; font-size: 1.5vw; padding-top: 6vw;" class="top"> 
+                        <p>Olá XXX XXX XXX, Seja bem-vindo</p>
+                        <p>ao RESERVE-ME.</p>
+                    </div>
+                    <div class="bottom"> 
+                        <div class="button-2">
+                            <a href="">Serviço solicitado</a>
+                        </div>
+                        <div class="button-2">
+                            <a href="index.html">Sair</a>
+                        </div>
+                    </div> 
+                </div>  
+            </div>
+        </nav>
+    
+            
+    </header>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <p>Deseja Agendar com o barbeiro Xxxxx Xxxx,Dia xx xx xxxxxxxx, as xxh xx xxxxx, com o serviço de xxxxxxxxxxxxxxxxxx</p>
+          <p>Não esqueça de marcar na sua agenda!</p>
+          <button id="agendar" class="agendarpopup">Agendar</button>
+          <button id="fecharPopup" class="fecharPopup">Voltar</button>
+        </div>
+    </div>
+
+ <!--Banner do site-->
+    
+    <div class="container barbeiro-1">
+        <!-- Coluna 1: Escolha de Barbeiro, Horário e Serviço para Barbeiro 1 -->
+        <div class="column barbeiro-1">
+            <h2>Barbeiro Escolhido</h2>
+            <div class="profile-box">           
+                <img class="profile-picture" src="img/barbeiro.png" alt="Foto de Perfil">
+                <div class="profile-info">
+                    <h2>Marcos Pereira</h2>
+                    <img src="img/5 ESTRELAS.png" alt="">
+                    <p>Endereço: Av Ário Barnabe, 123, jd Lima</p>
+                    <ul>
+                        <li>Corte Masculino</li>
+                        <li>Corte cabelo cacheado e crespo</li>
+                        <li>Barba</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Escolha uma Data</h2>
+            <input type="date" id="data">
+
+            <h2>Escolha um Serviço</h2>
+            <select id="Tipo" name="Tipo">
+                <option value="op1">Corte Masculino</option>
+                <option value="op2">Corte Cabelo Cacheado</option>
+                <option value="op3">Corte Cabelo Crespo</option>
+                <option value="op4">Barba</option>
+            </select>
+        </div>
+
+        <!-- Coluna 2: Escolha de Dia e Horário com Calendário -->
+        <div class="column barbeiro-1">
+            <h2 style="text-align: center;">Escolha um Dia e Horário Disponível</h2>
+            <div class="calendar barbeiro-1">             
+                
+                <!-- Aqui você pode adicionar um calendário mais avançado -->
+                <button id="openPopup" class="agendar-profissional">Agendar</button>
+
+            </div>
+        </div>
+    </div>
+   
+
+<script>
+    const openPopupButton = document.getElementById("openPopup");
+        const popup = document.getElementById("popup");
+        const closeButton = document.getElementById("fecharPopup");
+
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "block";
+        });
+
+        closeButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+</script>
+
+
+
+    
+    
+</body>
+</html>

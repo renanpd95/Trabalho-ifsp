@@ -29,10 +29,11 @@ nav .logo img{
     width: 20vw; 
 }
 
-nav .text p{
+nav .text a{
     font-size: 2vw;
     color: white;   
     cursor: pointer;
+    text-decoration: none;
 }
 
 nav .menu {
@@ -47,7 +48,7 @@ nav .menu img{
 nav .menu:hover >.nav-lateral {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
    
 }
 
@@ -59,6 +60,7 @@ nav .menu:hover >.nav-lateral {
     display: none;
     position: absolute;
     text-align: center;
+    z-index: 1;
 }
 
 .nav-lateral .top .button-1{
@@ -107,6 +109,12 @@ nav .menu:hover >.nav-lateral {
 
 
 /*SERVIÇOS DO SITE*/
+
+.row{
+    
+    padding: 0 4px;
+    z-index: 2;
+}
 section{
     width: 100%;  
     margin:auto;
@@ -115,29 +123,101 @@ section{
     text-align: center;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    z-index: 1000;
+    z-index: 2;
 }
 
-section .services{
+
+section .services-1{
+    cursor: pointer;
+    transition-duration: 1s;
+    
+}
+section .services-1:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-2{
     cursor: pointer;
     transition-duration: 1s;
 }
-section .services:hover{
+section .services-2:hover{
     transform: scale(1.3);
     transition-duration: 1s;
-
-
 }
-section .services > p{
+section .services-3{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-3:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-4{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-4:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+section .services-5{
+    cursor: pointer;
+    transition-duration: 1s;
+}
+section .services-5:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+}
+
+section .services-1 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-1 > p{
     margin-top: 1px;
     font-size: 2vw;
     font-weight: bold;
 
 }
-
-section .services > img{
+section .services-2 > img{
     width: 10vw;
     height: 10vw;
+}
+section .services-2 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-3 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-3 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-4 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-4 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
+}
+section .services-5 > img{
+    width: 10vw;
+    height: 10vw;
+}
+section .services-5 > p{
+    margin-top: 1px;
+    font-size: 2vw;
+    font-weight: bold;
+
 }
 
 /*SERVIÇOS DO SITE*/
@@ -243,6 +323,585 @@ footer .slider .right p{
 }
 
 /*FOOTER DO SITE*/
+
+
+/*
+ _        ___     ____   ___   _   _ 
+| |      / _ \   / ___| |_ _| | \ | |
+| |     | | | | | |  _   | |  |  \| |
+| |___  | |_| | | |_| |  | |  | |\  |
+|_____|  \___/   \____| |___| |_| \_|
+*/                     
+
+.login{
+
+    height: 100vh;
+    background-color: #D6D6D6;
+
+    padding-left: 39.5%;
+}
+
+
+.login h2{
+    padding: 3vw;
+    font-size: 2vw;
+   
+}
+#loginForm{
+    width: 40%;
+}
+#loginForm > label{
+    font-size: 1.5vw;
+
+}
+#loginForm > a{
+    text-decoration: none;
+    color: black;
+
+}
+#loginForm > p >a{
+    text-decoration: none;
+    color: black;
+
+}
+#loginForm .button-login{
+    text-align: center;
+
+}
+#loginForm .button-login  > input{
+    margin-top: 2vw;
+    background-color: #00FF38;
+    padding: 1vw 8vw 1vw 8vw;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#loginForm > input{
+    font-size: 1vw;
+    padding: 1.3vw 10vw 1.3vw 1vw;
+}
+
+
+/*CADASTRO*/
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.container input{
+    border-radius: 3vw;
+    padding: 0.8vw 10vw 0.8vw 2vw;
+    border: 1px solid #0487FF;
+    margin: 1vw 1vw;
+}
+.container select{
+    border-radius: 3vw;
+    padding: 0.8vw 2vw 0.8vw 2vw;
+    border: 1px solid #0487FF;
+}
+.coluna {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 1.5vw 13vw 1.5vw 13vw;
+    background-color: #91b499;
+    text-align: center;
+    border-radius: 3vw;
+    border: none;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+    /*PRESTAR SERVIÇOS*/
+
+    /* Estilos para formatar o formulário */
+
+    .prestar-body{
+        background-color: #D6D6D6;
+    }
+    .form-container.prestar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .column.prestar {
+        width: 45%;
+    }
+    .form-group.prestar {
+        margin-bottom: 1.5vw;
+    }
+    .form-group.prestar label {
+        display: block;
+        font-size: 1.7vw;
+    }
+    .form-group.prestar input, .form-group.prestar textarea {
+        width: 100%;
+        padding: 1.8vw 1vw 1.8vw 2vw;
+    }
+    .button-container.prestar {
+        text-align: center;
+        
+
+    }
+    .button-container.prestar button {
+        padding: 1vw 3vw 1vw 3vw;
+        font-size: 2vw;
+        border-radius: 1px;
+        background-color: #00FF38;
+        color: #000000;
+        margin-top: -2vw;
+        border: 1px solid black;
+        
+    }
+    .form-container{
+        padding: 5vw;
+    }
+
+    
+    /*BARBEIRO*/
+
+    .text-profile{
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5vw;
+    }
+    .profile-box {
+        display: flex;
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        width: 30vw; /* Largura máxima da caixa */
+        background: white;
+        
+    }
+    
+    .profissional{
+        background: #D6D6D6;
+    }
+
+    .box{
+        display: flex;
+        justify-content: center;
+    }
+    .profile-picture {
+        width: 7vw;
+        height: 10vw;
+        margin-right: 1.5vw;
+        margin-top: 0vw;
+    }
+    .profile-info {
+        flex: 1;
+    }
+    .profile-info h2 {
+        margin: 0;
+        
+    }
+    .profile-info p {
+        margin: 1vw 0vw 1vw 0vw;
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /*BARBEIRO*/
+
+    .container.barbeiro-1 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .column.barbeiro-1 {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    .column.barbeiro-1 h2 {
+        margin-top: 0;
+    }
+    .calendar.barbeiro-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar.barbeiro-1 label {
+        font-weight: bold;
+    }
+    .agendar-profissional{
+        background-color: #00FF38;
+        border-radius: 0px;
+        color: black;
+        font-size: 2vw;
+        border: 1px solid black;
+    }
+
+
+    /*Senha*/
+
+    .senha{
+        background:#D6D6D6;
+        padding: 3vw;
+        height: 100vh;
+    }
+    .senha > p{
+        font-size: 2vw;
+        margin-top: 5vw;
+    }
+    .senha > input{
+        font-size: 2vw;
+        margin-top: 2vw;
+        padding: 1vw 1vw 1vw 1vw ;
+        width: 100%;
+        border: none;
+    }
+    .senha > .button-senha{
+        font-size: 2vw;
+        padding: 10vw 1vw 1vw 1vw ;
+        
+    }
+    .senha >.button-senha > input{
+        font-size: 2vw;
+        padding: 1vw 6vw 1vw 6vw ;
+        background-color: #00FF38;
+        border: 1px solid black;
+        cursor: pointer;
+        
+    }
+
+
+     /*Como Funciona */
+
+    
+     .cor-pagina {
+        background: #D6D6D6;
+    
+    }
+    .como-funciona {
+        padding: 2vw 8vw 5vw 8vw;
+        text-align: center;
+    }
+    .como-funciona h2{
+        font-size: 2.5vw;
+        margin-top: 3%;
+    }
+    .como-funciona p{
+        font-size: 2vw;
+        margin-top: 4%;
+        text-align: justify;
+        
+    }
+    footer .slider-funciona{    
+        text-align: center;
+        padding: 3vw 9vw 3vw 9vw;
+    }
+    footer .slider-funciona2{       
+        text-align: center;
+        padding: 3vw 9vw 3vw 9vw;
+        
+    }
+    .doc-laranja{
+        align-items: center;
+    }
+    .usuario{
+        align-items: center;
+    }
+    .doc-laranja p{
+        font-size: 1.5vw;
+        text-align: justify;
+    }
+    .usuario p {
+        font-size: 1.5vw;
+        text-align: justify;
+    }
+
+    /*POPUP*/
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+       
+    }
+    .popup p{
+        font-size: 1.7vw;
+        padding: 1vw;
+        color: white;
+        margin: 1vw 1vw 4vw 1vw;
+    }
+
+    .popup-content {
+        background-color: #200857;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .agendarpopup{
+        background-color: #00FF38;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+    .fecharPopup{
+        background-color: red;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+     /*POPUP-SERVIÇOS*/
+     .popup-servico {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+       
+    }
+    .popup-servico p{
+        font-size: 1.7vw;
+        padding: 1vw;
+        color: black;
+        margin: 1vw 1vw 0.2vw 1vw;
+    }
+
+    .popup-content-servico  {
+        background-color: #D6D6D6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .agendarpopup{
+        background-color: red;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+    .fecharPopup{
+        background-color: #D6D6D6;
+        border: 1px solid black;
+        color: black;
+        border-radius: 0%;
+        font-size: 2vw;
+    }
+
+
+@media (max-width: 720px) {
+    nav .logo img{
+        width: 30vw; 
+    }
+
+    nav .logo {
+        margin-right: 6vw; 
+    }
+    nav .menu img{
+        width: 5vw;
+        cursor: pointer;
+    }
+
+    nav .space{
+        width: 3%;
+    }
+
+    nav .text p{
+        font-size: 3vw;
+
+    }
+    section{
+        flex-wrap: wrap;
+    }
+    section .services-1 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-2 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-3 img{
+        width: 28vw;
+        height: 30vw;
+   
+    }
+    section .services-4 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-5 img{
+        width: 30vw;
+        height: 30vw;
+   
+    }
+    section .services-1 p{
+        font-size: 5vw;
+   
+    }
+    section .services-2 p{
+        font-size: 5vw;
+   
+    }
+    section .services-3 p{
+        font-size: 5vw;
+   
+    }
+    section .services-4 p{
+        font-size: 5vw;
+   
+    }
+    section .services-5 p{
+        font-size: 5vw;
+   
+    }
+    section .services-1{
+        float: left;
+        width: 50%;
+        margin-bottom: 10vw;
+    }
+
+    section .services-2{
+        float: right;
+        width: 50%;
+       
+    }
+    section .services-3{
+        float: left;
+        width: 50%;
+    }
+    section .services-4{
+        float: right;
+        width: 50%;
+        
+    }
+    section .services-5{
+        margin-top: 3vw;
+        
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main .banner{
+ 
+        flex-direction: column;
+        
+    }
+
+    main .banner .left h1{
+        font-size: 5vw; 
+
+    }
+
+    main .banner .left p{
+        font-size: 4vw; 
+
+    }
+    footer .slider .right h3{
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    
+    }
+    
+    footer .slider .right p{
+        font-size: 2.5vw;
+        font-weight: lighter;
+        width: 90%;
+    
+    }
+
+    .nav-lateral{
+        background-color: #0487FFF0;
+        width: 100vw;
+        margin-top: 3vw;
+        margin-left: -89vw;
+        height: 50vh;
+        display: none;
+        position: absolute;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .nav-lateral .top .button-1{
+        margin: 6vw 30vw 0vw 30vw;
+        padding: 1vw;
+        background-color: #00FF38;
+    }
+    .nav-lateral .top .button-1 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+    }
+
+    .nav-lateral .top .button-2{
+        margin: 6vw 30vw 0vw 30vw;
+        padding: 1vw;
+        background-color: red;
+    }
+    .nav-lateral .top .button-2 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+    }
+    
+    .nav-lateral .bottom .button-2{
+        margin: 2vw 30vw 0vw 30vw;
+        padding: 1vw;
+        border: 3px solid #030166;
+        
+    }
+    
+    
+    .nav-lateral .bottom .button-2 a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 4.5vw;
+        
+    }
+
+    
+    
+  
+   
+   
+
+    
+}
 
 
 
