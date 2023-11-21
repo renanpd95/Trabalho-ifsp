@@ -470,7 +470,64 @@ button {
     }
     .form-container{
         padding: 5vw;
+
     }
+
+    .atendimento{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .atendimento .atendimento-opcao {
+        display: flex;
+        align-items: center;
+        margin: 0.9vw;
+        
+    }
+    .atendimento .atendimento-opcao input{
+        padding: 0.7vw 1.1vw 0.7vw 1.1vw;
+        
+    }
+
+    .atendimento-opcao label {
+        margin-right: 1vw; /* Adiciona um espaço entre o checkbox e o texto */
+    }
+
+    .atendimento-opcao div {
+        margin-left: 1vw; /* Adiciona um espaço entre os elementos */
+    }
+
+    /*INICIO-PRESTAR-SERVIÇO*/
+    .radio-button {
+        display: none; /* Esconde o botão de rádio padrão */
+    }
+
+    .custom-radio {
+        display: block;
+        cursor: pointer;
+        padding: 1vw 1vw 1vw 1vw;
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid;
+        font-size:1.4vw;
+        width: 40%;
+    }
+
+    .button-prestar{
+        margin: 4vw 0vw 0vw 0vw;
+        background-color: #00FF38;
+        padding: 1vw 8vw 1vw 8vw;
+        font-size: 2vw;
+        font-weight: bold;
+        border: 1px solid #000000;
+        cursor: pointer;
+        border-radius: 0;
+        color: #000000;
+    
+    }
+
+
+    /*INICIO-PRESTAR-SERVIÇO*/
 
     
     /*BARBEIRO*/

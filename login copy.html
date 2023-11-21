@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Agendamento</title>
+    <style>
+        /* Adicione suas estilizações CSS aqui */
+
+        /* Exemplo de estilos para dias disponíveis e indisponíveis */
+        .disponivel {
+            background-color: #aaffaa;
+        }
+
+        .indisponivel {
+            background-color: #ffaaaa;
+        }
+
+        #calendario {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .dia-semana, .dia-mes {
+            width: 14%;
+            padding: 10px;
+            text-align: center;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .mes-ano {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .dias-semana {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .dia-hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <!-- Adicione os botões de navegação -->
+        <button id="anterior">Anterior</button>
+        <span id="mes-ano" class="mes-ano"></span>
+        <button id="proximo">Próximo</button>
+    </div>
+
+    <div class="dias-semana">
+        <div class="dia-semana">Seg</div>
+        <div class="dia-semana">Ter</div>
+        <div class="dia-semana">Qua</div>
+        <div class="dia-semana">Qui</div>
+        <div class="dia-semana">Sex</div>
+        <div class="dia-semana">Sáb</div>
+        <div class="dia-semana">Dom</div>
+    </div>
+
+    <div id="calendario"></div>
+
+    <div>
+        <!-- Adicione a lista de profissionais e horários disponíveis -->
+        <label for="listaProfissionais">Selecione um profissional:</label>
+        <select id="listaProfissionais">
+            <option value="profissional1">Profissional 1</option>
+            <option value="profissional2">Profissional 2</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+
+        <div id="horarios-disponiveis"></div>
+    </div>
+
+    <script>
+        let mesAtual = 11;
+        let anoAtual = 2023;
+
+        const dadosCalendario = {
+            mes: 'Novembro',
+            ano: 2023,
+            diasDoMes: [
+                { dia: 1, disponivel: true },
+                { dia: 2, disponivel: false },
+                // Adicione mais dias conforme necessário
+            ],
+        };
+
+        preencherCalendario(mesAtual, anoAtual);
+
+        document.getElementById('anterior').addEventListener('click', retrocederMes);
+        document.getElementById('proximo').addEventListener('click', avancarMes);
+
+        function preencherCalendario(mes, ano) {
+            dadosCalendario.mes = obterNomeMes(mes);
+            dadosCalendario.ano = ano;
+
+            document.getElementById('mes-ano').innerText = `${dadosCalendario.mes} ${dadosCalendario.ano}`;
+
+            const calendario = document.getElementById('calendario');
+            calendario.innerHTML = '';
+
+            const diasNoMes = new Date(ano, mes + 1, 0).getDate();
+            const primeiroDiaMes = new Date(ano, mes, 1).getDay();
+
+            const diasSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+
+            // Adiciona os dias da semana
+            for (let i = 0; i < 7; i++) {
+                const divDiaSemana = document.createElement('div');
+                divDiaSemana.innerText = diasSemana[i];
+                divDiaSemana.className = 'dia-semana';
+                calendario.appendChild(divDiaSemana);
+            }
+
+            // Adiciona os dias do mês
+            for (let i = 0; i < 42; i++) {  // 6 semanas para cobrir todos os casos
+                const divDia = document.createElement('div');
+                divDia.className = 'dia-mes';
+
+                if (i < primeiroDiaMes || i >= (primeiroDiaMes + diasNoMes)) {
+                    // Oculta os dias fora do mês atual
+                    divDia.style.visibility = 'hidden';
+                    divDia.classList.add('dia-hidden');
+                } else {
+                    const diaDoMes = i - primeiroDiaMes + 1;
+                    const disponivel = dadosCalendario.diasDoMes.find(dia => dia.dia === diaDoMes)?.disponivel || false;
+
+                    divDia.innerText = diaDoMes;
+                    divDia.className = disponivel ? 'dia-mes disponivel' : 'dia-mes indisponivel';
+
+                    divDia.addEventListener('click', () => selecionarDia(diaDoMes, disponivel));
+                }
+
+                calendario.appendChild(divDia);
+            }
+        }
+
+        function retrocederMes() {
+            mesAtual--;
+            if (mesAtual < 0) {
+                mesAtual = 11;
+                anoAtual--;
+            }
+            preencherCalendario(mesAtual, anoAtual);
+        }
+
+        function avancarMes() {
+            mesAtual++;
+            if (mesAtual > 11) {
+                mesAtual = 0;
+                anoAtual++;
+            }
+            preencherCalendario(mesAtual, anoAtual);
+        }
+
+        function obterNomeMes(numeroMes) {
+            const meses = [
+                'Janeiro', 'Fevereiro', 'Março', 'Abril',
+                'Maio', 'Junho', 'Julho', 'Agosto',
+                'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+            ];
+            return meses[numeroMes];
+        }
+
+        function selecionarDia(dia, disponivel) {
+            if (disponivel) {
+                const profissionalSelecionado = document.getElementById('listaProfissionais').value;
+                const horariosDisponiveis = obterHorariosDisponiveis(profissionalSelecionado, dia);
+                exibirHorariosDisponiveis(horariosDisponiveis);
+            } else {
+                alert('Este dia não está disponível.');
+            }
+        }
+
+        function obterHorariosDisponiveis(profissional, dia) {
+            return ['09:00', '10:00', '14:00', '15:00'];
+        }
+
+        function exibirHorariosDisponiveis(horarios) {
+            const horariosDisponiveis = document.getElementById('horarios-disponiveis');
+            horariosDisponiveis.innerHTML = '';
+
+            horarios.forEach(horario => {
+                const divHorario = document.createElement('div');
+                divHorario.innerText = horario;
+
+                divHorario.addEventListener('click', () => agendarHorario(horario));
+
+                horariosDisponiveis.appendChild(divHorario);
+            });
+        }
+
+        function agendarHorario(horario) {
+            alert(`Horário ${horario} agendado com sucesso!`);
+        }
+    </script>
+</body>
+</html>

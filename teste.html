@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Configuração de Atendimento</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="atendimento">
+            <h2>Configuração de Atendimento</h2>
+            <div class="atendimento opcao1" id="opcao1">
+                <label>
+                    <input type="checkbox" id="mondayToggle">
+                </label>
+                <span>Segunda-feira</span>
+                <div>
+                    <input type="time" id="mondayStartTime">
+                </div>
+                <div>
+                    <input type="time" id="mondayEndTime">
+                </div>
+            </div>
+            <!-- Adicione divs semelhantes para os outros dias da semana -->
+            <!-- Exemplo para Terça-feira -->
+            <div class="day-settings" id="tuesdaySettings">
+                <span>Terça-feira</span>
+                <label>
+                    Atender
+                    <input type="checkbox" id="tuesdayToggle">
+                </label>
+                <div>
+                    <label for="tuesdayStartTime">Início:</label>
+                    <input type="time" id="tuesdayStartTime">
+                </div>
+                <div>
+                    <label for="tuesdayEndTime">Fim:</label>
+                    <input type="time" id="tuesdayEndTime">
+                </div>
+            </div>
+            <!-- Repita para os demais dias -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
