@@ -484,19 +484,31 @@ button {
         margin: 0.9vw;
         
     }
-    .atendimento .atendimento-opcao input{
+
+    .atendimento-opcao span{
+        width: 4vw;
+        min-width: 4vw;
+        font-size: 1.1vw;
+    }
+
+    .atendimento .hora{
+        font-size: 1vw;
+    }
+    .atendimento .atendimento-opcao .hora{
         padding: 0.7vw 1.1vw 0.7vw 1.1vw;
+        border-radius: 1vw;
+        border: none;
         
     }
 
     .atendimento-opcao label {
-        margin-right: 1vw; /* Adiciona um espaço entre o checkbox e o texto */
+        margin-right: 1vw; 
     }
 
     .atendimento-opcao div {
-        margin-left: 1vw; /* Adiciona um espaço entre os elementos */
+        margin-left: 1vw;
     }
-
+    
     /*INICIO-PRESTAR-SERVIÇO*/
     .radio-button {
         display: none; /* Esconde o botão de rádio padrão */
@@ -580,6 +592,95 @@ button {
         cursor: pointer;
     }
 
+    .wrapper{
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+   
+    }
+    .wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+    }
+    header .icons{
+    display: flex;
+    }
+    header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+    }
+    .icons span:last-child{
+    margin-right: -10px;
+    }
+    header .icons span:hover{
+    background: #f2f2f2;
+    }
+    header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+    }
+    .calendar{
+    padding: 20px;
+    }
+    .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    }
+    .calendar .days{
+    margin-bottom: 20px;
+    }
+    .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+    }
+    .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+    }
+    .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    }
+    .days li.inactive{
+    color: #aaa;
+    }
+    .days li.active{
+    color: #fff;
+    }
+    .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .days li.active::before{
+    background: #9B59B6;
+    }
+    .days li:not(.active):hover::before{
+    background: #f2f2f2;
+    }
+
     /*BARBEIRO*/
 
     .container.barbeiro-1 {
@@ -609,6 +710,7 @@ button {
         color: black;
         font-size: 2vw;
         border: 1px solid black;
+        z-index: 11;
     }
 
 
@@ -698,7 +800,7 @@ button {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 100;
        
     }
     .popup p{

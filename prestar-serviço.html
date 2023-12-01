@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stlye.css">
     <title>Reserve.me</title>
+
 </head>
 
 <body class="prestar-body">
@@ -74,90 +75,439 @@
                     <h2>Configuração de Atendimento</h2>
                     <div class="atendimento-opcao" id="opcao1">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Segunda">
                         </label>
                         <span>Segunda</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao2">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Terça">
                         </label>
                         <span>Terça</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao3">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Quarta">
                         </label>
                         <span>Quarta</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao4">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Quinta">
                         </label>
                         <span>Quinta</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao5">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Sexta">
                         </label>
                         <span>Sexta</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao6">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Sabado">
                         </label>
                         <span>Sabado</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
                     <div class="atendimento-opcao" id="opcao7">
                         <label>
-                            <input type="checkbox" id="mondayToggle">
+                            <input type="checkbox" class="diaToggle" data-dia="Domingo">
                         </label>
                         <span>Domingo</span>
-                        <div>
-                            <input type="time" id="mondayStartTime">
+                        <div class="horarios">
+                            <select class="hora horaInicio" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                         <div>
-                            <input type="time" id="mondayEndTime">
+                            <select class="hora horaFim" name="option">
+                                <option value="0" selected>00:00</option>
+                                <option value="1">01:00</option>
+                                <option value="2">02:00</option>
+                                <option value="3">03:00</option>
+                                <option value="4">04:00</option>
+                                <option value="5">05:00</option>
+                                <option value="6">06:00</option>
+                                <option value="7">07:00</option>
+                                <option value="8">08:00</option>
+                                <option value="9">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                                <option value="13">13:00</option>
+                                <option value="14">14:00</option>
+                                <option value="15">15:00</option>
+                                <option value="16">16:00</option>
+                                <option value="17">17:00</option>
+                                <option value="18">18:00</option>
+                                <option value="19">19:00</option>
+                                <option value="20">20:00</option>
+                                <option value="21">21:00</option>
+                                <option value="22">22:00</option>
+                                <option value="23">23:00</option>
+                              </select>
                         </div>
                     </div>
-                    
-                    <!-- Repita para os demais dias -->
+                                
                 </div>
             </div>
             
@@ -172,18 +522,60 @@
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Coleta dados do formulário
+      const formData = {
+        usuario: document.getElementById('usuario').value,
+        senha: document.getElementById('senha').value,
+        servico: document.getElementById('servico').value,
+        observacoes: document.getElementById('observacoes').value,
+        local: document.getElementById('local').value,
+        diasDisponiveis: [], // Array para armazenar dias selecionados
+        horarios: [], // Array para armazenar pares de horários de início/fim
+      };
+
+      // Coleta dias selecionados
+      document.querySelectorAll('.diaToggle:checked').forEach(function (checkbox) {
+        formData.diasDisponiveis.push(checkbox.dataset.dia);
+      });
+
+      // Coleta horários de início e fim
+      document.querySelectorAll('.atendimento-opcao').forEach(function (opcao) {
+        if (opcao.querySelector('.diaToggle:checked')) {
+          const inicio = opcao.querySelector('.horaInicio').value;
+          const fim = opcao.querySelector('.horaFim').value;
+          formData.horarios.push({ inicio, fim });
+        }
+      });
+
+      // Envia dados para o servidor Node.js usando fetch
+      fetch('http://localhost:3000/profissionais', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Dados enviados com sucesso!', data);
+        // Faça algo com a resposta se necessário
+      })
+      .catch(error => {
+        console.error('Erro ao enviar dados:', error);
+      });
+    });
+  });
 
 
-<script src="script.js"></script>
+</script>
 
  
 </body>
 
-<script>
-    
-    
 
-   
-
-</script>
 </html>

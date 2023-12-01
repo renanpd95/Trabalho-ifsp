@@ -33,8 +33,6 @@ function enviarDados(event) {
 }
 
 
-
-
 //codigo cadastrar usuario
 
 function enviarDados(event) {
@@ -69,4 +67,3 @@ function enviarDados(event) {
 }
 
 
-//codigo cadastrar usuario
