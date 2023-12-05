@@ -43,9 +43,7 @@
     </header>
     <div id="popup" class="popup">
         <div class="popup-content">
-          <p>Deseja Agendar com o barbeiro Xxxxx Xxxx,Dia xx xx xxxxxxxx, as xxh xx xxxxx, com o serviço de xxxxxxxxxxxxxxxxxx</p>
-          <p>Não esqueça de marcar na sua agenda!</p>
-          <button id="agendar" class="agendarpopup">Agendar</button>
+          <p>Horario Agendado com Sucesso!</p>
           <button id="fecharPopup" class="fecharPopup">Voltar</button>
         </div>
     </div>
@@ -107,9 +105,14 @@
                   </div>
 
                 <button id="openPopup" class="agendar-profissional">Agendar</button>
-
             </div>
         </div>
+        <div class="column barbeiro-1">
+            <h4>horarios</h4>
+            <div class="boxHorarios">
+                <div id="texto-exibido"></div>
+            </div>
+        </div>    
     </div>
 
 
@@ -149,6 +152,7 @@
             for (let i = lastDayofMonth; i < 6; i++) { // criando li para os primeiros dias do próximo mês
                 liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
             }
+
             currentDate.innerText = `${months[currMonth]} ${currYear}`; // passando o mês e o ano atuais como texto da data atual
             daysTag.innerHTML = liTag;
         }
@@ -171,46 +175,211 @@
             });
         });
 
+     
+
     </script>
-    <!-- Adicione o seguinte bloco de código JavaScript após o bloco que você já tem -->
-    <script>
-        const days = document.querySelectorAll(".days li");
 
-        days.forEach(day => {
-            day.addEventListener("click", () => {
-                const selectedDay = parseInt(day.innerText);
-                // Aqui você pode adicionar a lógica para obter os horários disponíveis do profissional para o dia selecionado
-                // e exibir essa informação. Por enquanto, vamos apenas mostrar um alerta com o dia selecionado.
-                alert(`Você selecionou o dia ${selectedDay}`);
-            });
-        });
-    </script>
-    <script>
-        const days = document.querySelectorAll(".days li");
-        days.forEach(day => {
-            day.addEventListener("click", () => {
-                const selectedDay = parseInt(day.innerText);
-                getAvailableTimes(selectedDay);
-            });
-        });
+<script>
 
-        function getAvailableTimes(day) {
-            // Aqui você deve fazer uma solicitação fetch para o seu servidor Node.js
-            // para obter os horários disponíveis do profissional para o dia selecionado.
-            // Substitua a URL abaixo pela URL do seu endpoint no servidor.
-            const apiUrl = `http://seu-servidor.com/api/disponibilidade?dia=${day}`;
+// Selecione a div onde você deseja adicionar os botões
+const horas = document.getElementById('texto-exibido'); // Substitua 'suaDiv' pelo ID real da sua div
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Aqui você pode manipular os dados retornados, por exemplo, exibindo-os na página.
-                    alert(`Horários disponíveis para o dia ${day}:\n${data.join(", ")}`);
-                })
-                .catch(error => {
-                    console.error("Erro ao obter horários disponíveis:", error);
-                });
-        }
-</script>   
+// Selecione todos os elementos li
+const liElements = document.querySelectorAll('.days li');
+
+// Itera sobre cada elemento li
+liElements.forEach(li => {
+  // Adicione um ouvinte de evento de clique a cada elemento li
+  li.addEventListener('click', () => {
+    // Verifica se o texto do li é "8"
+    if (li.textContent === '8') {
+      // Horários que você deseja adicionar
+      const horarios = [ '06:00', '07:00', '11:00', '13:00', '15:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    } 
+    if (li.textContent === '9') {
+      // Horários que você deseja adicionar
+      const horarios = [ '06:00', '11:00', '13:00', '15:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+    if (li.textContent === '10'|| li.textContent === '17') {
+      // Horários que você deseja adicionar
+      const horarios = [];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+   
+    if (li.textContent === '11' || li.textContent === '23') {
+      // Horários que você deseja adicionar
+      const horarios = [ '08:00', '12:00', '13:00', '14:00','15:00','16:00','17:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+
+    if (li.textContent === '12'|| li.textContent === '22') {
+      // Horários que você deseja adicionar
+      const horarios = [ '08:00', '12:00', '14:00','15:00','16:00','17:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+
+    if (li.textContent === '13' || li.textContent === '21') {
+      // Horários que você deseja adicionar
+      const horarios = [ '07:00', '12:00', '14:00','18:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+
+    if (li.textContent === '14' || li.textContent === '20') {
+      // Horários que você deseja adicionar
+      const horarios = [ '16:00','17:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+    
+    if (li.textContent === '15' || li.textContent === '19') {
+      // Horários que você deseja adicionar
+      const horarios = [ '9:00','13:00','15:00','16:00','17:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+
+    if (li.textContent === '16' || li.textContent === '18') {
+      // Horários que você deseja adicionar
+      const horarios = [ '16:00'];
+
+      // Crie um fragmento para adicionar os botões de uma vez
+      const fragmento = document.createDocumentFragment();
+
+      // Adicione botões ao fragmento usando a lista de horários
+      horarios.forEach(horario => {
+        const novoBotao = criarNovoBotao(horario);
+        fragmento.appendChild(novoBotao);
+      });
+
+      // Limpe o conteúdo existente e adicione o fragmento à sua div
+      horas.innerHTML = '';
+      horas.appendChild(fragmento);
+    }
+
+  });
+  
+});
+
+// Função auxiliar para criar um novo botão
+function criarNovoBotao(texto) {
+  const novoBotao = document.createElement('button');
+  novoBotao.className = 'buttonHorario';
+  novoBotao.textContent = texto;
+
+  // Adiciona um ouvinte de evento para o clique no botão
+  novoBotao.addEventListener('click', function() {
+    // Alterna a classe 'ativo' no botão ao ser clicado
+    this.classList.toggle('ativo');
+  });
+
+  return novoBotao;
+}
+
+</script>
+
+<script>
+    function toggleClicked(element) {
+      element.classList.toggle('clicked');
+    }
+  </script>
+
+
 
 <script>
     const openPopupButton = document.getElementById("openPopup");
