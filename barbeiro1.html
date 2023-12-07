@@ -30,6 +30,7 @@
                     <div class="bottom"> 
                         <div class="button-2">
                             <a href="">Serviço solicitado</a>
+          
                         </div>
                         <div class="button-2">
                             <a href="index.html">Sair</a>
@@ -48,6 +49,8 @@
         </div>
     </div>
 
+
+
  <!--Banner do site-->
     
     <div class="container barbeiro-1">
@@ -61,19 +64,20 @@
                     <img src="img/5 ESTRELAS.png" alt="">
                     <p>Endereço: Av Ário Barnabe, 123, jd Lima</p>
                     <ul>
-                        <li>Corte Masculino</li>
-                        <li>Corte cabelo cacheado e crespo</li>
+                        <li>Cabelo</li>
                         <li>Barba</li>
+                        
                     </ul>
                 </div>
             </div>
             
             <h2>Escolha um Serviço</h2>
             <select id="Tipo" name="Tipo">
-                <option value="op1">Corte Masculino</option>
-                <option value="op2">Corte Cabelo Cacheado</option>
-                <option value="op3">Corte Cabelo Crespo</option>
-                <option value="op4">Barba</option>
+                <option disabled selected hidden>Escolha</option>
+                <option value="op1">CABELO R$ 35,00</option>
+                <option value="op2">BARBA R$35,00</option>
+                <option value="op3">CABELO E BARBA R$65,00</option>
+               
             </select>
         </div>
 
@@ -115,6 +119,7 @@
         </div>    
     </div>
 
+    
 
 <script>
       // Selecionando elementos HTML necessários
@@ -187,10 +192,14 @@ const horas = document.getElementById('texto-exibido'); // Substitua 'suaDiv' pe
 // Selecione todos os elementos li
 const liElements = document.querySelectorAll('.days li');
 
+let dia = '';
+
 // Itera sobre cada elemento li
 liElements.forEach(li => {
   // Adicione um ouvinte de evento de clique a cada elemento li
   li.addEventListener('click', () => {
+    dia = li.innerText;
+
     // Verifica se o texto do li é "8"
     if (li.textContent === '8') {
       // Horários que você deseja adicionar
@@ -203,8 +212,8 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+        
       });
-
       // Limpe o conteúdo existente e adicione o fragmento à sua div
       horas.innerHTML = '';
       horas.appendChild(fragmento);
@@ -220,8 +229,8 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
-      });
 
+      });
       // Limpe o conteúdo existente e adicione o fragmento à sua div
       horas.innerHTML = '';
       horas.appendChild(fragmento);
@@ -237,6 +246,8 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+        
+
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -255,6 +266,7 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -273,6 +285,7 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -291,6 +304,7 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -309,6 +323,7 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+    
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -338,6 +353,7 @@ liElements.forEach(li => {
       // Horários que você deseja adicionar
       const horarios = [ '16:00'];
 
+
       // Crie um fragmento para adicionar os botões de uma vez
       const fragmento = document.createDocumentFragment();
 
@@ -345,6 +361,7 @@ liElements.forEach(li => {
       horarios.forEach(horario => {
         const novoBotao = criarNovoBotao(horario);
         fragmento.appendChild(novoBotao);
+
       });
 
       // Limpe o conteúdo existente e adicione o fragmento à sua div
@@ -356,6 +373,7 @@ liElements.forEach(li => {
   
 });
 
+let textValue='';
 // Função auxiliar para criar um novo botão
 function criarNovoBotao(texto) {
   const novoBotao = document.createElement('button');
@@ -366,12 +384,67 @@ function criarNovoBotao(texto) {
   novoBotao.addEventListener('click', function() {
     // Alterna a classe 'ativo' no botão ao ser clicado
     this.classList.toggle('ativo');
+    textValue = texto;
+   
+    
   });
+ 
 
   return novoBotao;
 }
 
+selectServi = "";
+// Adiciona um ouvinte de evento de clique ao select Serviço
+document.getElementById('Tipo').addEventListener('click', function() {
+      // Obtém o índice da opção selecionada
+      const selectedIndex = this.selectedIndex;
+      // Obtém a opção selecionada com base no índice
+      const selectedOption = this.options[selectedIndex];
+      // Exibe o valor e o texto da opção selecionada no console
+      console.log('Texto:', selectedOption.text);
+      selectServi = selectedOption.text;
+    });
+
+
+        const openPopupButton = document.getElementById("openPopup");
+        const popup = document.getElementById("popup");
+        const closeButton = document.getElementById("fecharPopup");
+    
+
+        openPopupButton.addEventListener("click", function () {
+            popup.style.display = "block";
+            console.log(textValue, dia, selectServi);
+            
+            enviarDadosParaBancoDeDados(dia, textValue, selectServi);
+
+            function enviarDadosParaBancoDeDados(dia, textValue, selectServi) {
+            // Aqui você faria uma requisição para o seu servidor Node.js
+            fetch('http://localhost:3000/enviarParaBanco', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ day: dia, texto: textValue, servico: selectServi })
+            })
+                .then(response => response.json())
+                .then(data => {
+                console.log('Resposta do servidor:', data);
+                })
+                .catch(error => {
+                console.error('Erro na requisição:', error);
+                });
+            }
+            
+        });
+
+        closeButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+ 
+    
 </script>
+
+
 
 <script>
     function toggleClicked(element) {
@@ -381,19 +454,7 @@ function criarNovoBotao(texto) {
 
 
 
-<script>
-    const openPopupButton = document.getElementById("openPopup");
-        const popup = document.getElementById("popup");
-        const closeButton = document.getElementById("fecharPopup");
 
-        openPopupButton.addEventListener("click", function () {
-            popup.style.display = "block";
-        });
-
-        closeButton.addEventListener("click", function () {
-            popup.style.display = "none";
-        });
-</script>
 
 
 

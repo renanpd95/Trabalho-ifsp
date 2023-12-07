@@ -815,6 +815,9 @@ footer .slider .right p{
         z-index: 100;
        
     }
+    .popupp {
+        display: none;
+    }
     .popup p{
         font-size: 1.7vw;
         padding: 1vw;

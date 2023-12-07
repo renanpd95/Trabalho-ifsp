@@ -64,20 +64,28 @@ app.post('/profissionais', (req, res) => {
     );
   });
 
-  
-// Rota para obter dados de todos os profissionais
-app.get('/profissionais', (req, res) => {
-  const query = 'SELECT * FROM sua_tabela';
-  db.query(query, (error, results) => {
-    if (error) {
-      console.error('Erro ao executar a consulta:', error);
-      res.status(500).send('Erro ao processar a requisição.');
-      return;
-    }
 
-    res.status(200).json(results);
-  });
+
+
+// Rota para receber dados e inserir no banco de dados
+app.post('/enviarParaBanco', async (req, res) => {
+  const { day, texto, servico } = req.body;
+
+  connection.query(
+    'INSERT INTO agendamento (dia, horario, servico) VALUES (?, ?, ?)',
+    [day, texto, servico], // Adicionei um valor vazio para o campo 'dia', ajuste conforme necessário
+    (error, results) => {
+      if (error) {
+        console.error('Erro ao inserir dados:', error);
+        res.status(500).json({ error: 'Erro ao cadastrar dados' });
+        return;
+      }
+
+      res.status(200).json({ success: true, message: 'Cadastro realizado com sucesso' });
+    }
+  );
 });
+ 
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
